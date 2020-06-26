@@ -1,11 +1,14 @@
 package com.android.fgm;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Date;
 
 public class ChatMessage {
 
     private String messageText;
     private String messageUser;
+    private String userId;
     private long messageTime;
 
     public ChatMessage(String messageText, String messageUser){
@@ -14,6 +17,7 @@ public class ChatMessage {
         this.messageUser = messageUser;
 
         messageTime = new Date().getTime();
+        userId= FirebaseAuth.getInstance().getCurrentUser().getUid();
     }
 
     public ChatMessage(){
@@ -43,5 +47,16 @@ public class ChatMessage {
     public void setMessageTime(long messageTime) {
         this.messageTime = messageTime;
     }
+
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+
 }
 

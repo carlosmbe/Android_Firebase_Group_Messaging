@@ -33,8 +33,15 @@
 
     <ListView
         android:id="@+id/messageList"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/inputMessage"
-        android:layout_marginBottom="0dp" />
+        android:layout_above="@+id/sendButton"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        />
+
 </RelativeLayout>
