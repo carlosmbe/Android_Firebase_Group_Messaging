@@ -1,4 +1,4 @@
-# Android_Firebase_Group_Messageing
+# Android_Firebase_Group_Messaging
 
 An app that allows users to communicate through group chat using Firebase Realtime Database and feature Phone Number authentication.
 
